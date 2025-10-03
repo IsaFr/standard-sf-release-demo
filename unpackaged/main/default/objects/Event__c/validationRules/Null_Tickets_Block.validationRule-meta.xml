@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Null_Tickets_Block</fullName>
+    <active>true</active>
+    <description>This validation rule blocks users from setting zero (&quot;0&quot;) tickets on their registration records.</description>
+    <errorConditionFormula>Max_Tickets__c &lt; 0</errorConditionFormula>
+    <errorMessage>The minimum number of tickets per registration is one (1).</errorMessage>
+</ValidationRule>
