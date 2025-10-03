@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Valid_Ticket_Count_Range</fullName>
+    <active>true</active>
+    <description>This validations covers the business rule of having a valid range of 1 up to 5 tickets per registration record.</description>
+    <errorConditionFormula>OR(Ticket_Count__c &lt; 1, Ticket_Count__c &gt; 5)</errorConditionFormula>
+    <errorMessage>The maximum number of tickets allowed per registration is 5.</errorMessage>
+</ValidationRule>

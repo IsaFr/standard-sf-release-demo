@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Oversell_Prevention</fullName>
+    <active>true</active>
+    <description>This validation rule prevents the event record in matter to be oversold by the system.</description>
+    <errorConditionFormula>(Event__r.Total_Tickets_Sold__c + Ticket_Count__c) &gt; Event__r.Max_Tickets__c</errorConditionFormula>
+    <errorMessage>&quot;Not enough tickets available for this event.&quot;</errorMessage>
+</ValidationRule>
