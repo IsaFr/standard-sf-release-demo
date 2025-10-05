@@ -9,7 +9,7 @@
     <dashboardColorPalette>unity</dashboardColorPalette>
     <dashboardGridLayout>
         <dashboardGridComponents>
-            <colSpan>9</colSpan>
+            <colSpan>8</colSpan>
             <columnIndex>0</columnIndex>
             <dashboardComponent>
                 <autoselectColumnsFromReport>false</autoselectColumnsFromReport>
@@ -39,6 +39,44 @@
                 <report>unfiled$public/Event_Ticket_Summary_fVB</report>
                 <showPercentage>false</showPercentage>
                 <showTotal>true</showTotal>
+                <showValues>true</showValues>
+                <sortBy>RowLabelAscending</sortBy>
+                <sortLegendValues>true</sortLegendValues>
+                <useReportChart>false</useReportChart>
+            </dashboardComponent>
+            <rowIndex>0</rowIndex>
+            <rowSpan>16</rowSpan>
+        </dashboardGridComponents>
+        <dashboardGridComponents>
+            <colSpan>4</colSpan>
+            <columnIndex>8</columnIndex>
+            <dashboardComponent>
+                <autoselectColumnsFromReport>false</autoselectColumnsFromReport>
+                <chartAxisRange>Auto</chartAxisRange>
+                <chartSummary>
+                    <aggregate>Average</aggregate>
+                    <axisBinding>y</axisBinding>
+                    <column>Registration__c.Ticket_Count__c</column>
+                </chartSummary>
+                <componentType>Bar</componentType>
+                <decimalPrecision>-1</decimalPrecision>
+                <displayUnits>Auto</displayUnits>
+                <drillEnabled>false</drillEnabled>
+                <drillToDetailEnabled>false</drillToDetailEnabled>
+                <enableHover>false</enableHover>
+                <expandOthers>false</expandOthers>
+                <groupingColumn>CUST_NAME</groupingColumn>
+                <groupingSortProperties>
+                    <groupingSorts>
+                        <groupingLevel>g1</groupingLevel>
+                        <sortOrder>a</sortOrder>
+                    </groupingSorts>
+                </groupingSortProperties>
+                <header>Average of Tickets per Registration</header>
+                <legendPosition>Bottom</legendPosition>
+                <report>unfiled$public/Average_of_Tickets_per_Registration_H5g</report>
+                <showPercentage>false</showPercentage>
+                <showPicturesOnCharts>false</showPicturesOnCharts>
                 <showValues>true</showValues>
                 <sortBy>RowLabelAscending</sortBy>
                 <sortLegendValues>true</sortLegendValues>
