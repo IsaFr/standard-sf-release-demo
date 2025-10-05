@@ -34,7 +34,7 @@
             <label>Capacity Available</label>
         </rules>
     </decisions>
-    <description>covering only the scenario when it&#39;s triggered from the record page</description>
+    <description>adding the number of tickets remaining for the event in matter.</description>
     <dynamicChoiceSets>
         <name>EventName</name>
         <dataType>String</dataType>
@@ -51,6 +51,12 @@
     {!Number_of_Tickets} &lt;= {!GetEventID.Max_Tickets__c},
     ({!GetEventID.Total_Tickets_Sold__c} + {!Number_of_Tickets}) &lt;= {!GetEventID.Max_Tickets__c}
 )</expression>
+    </formulas>
+    <formulas>
+        <name>tickets_remaining_formula</name>
+        <dataType>Number</dataType>
+        <expression>{!GetEventID.Max_Tickets__c} - {!GetEventID.Total_Tickets_Sold__c}</expression>
+        <scale>0</scale>
     </formulas>
     <interviewLabel>Registration Creation {!$Flow.CurrentDateTime}</interviewLabel>
     <label>Registration Creation</label>
@@ -227,6 +233,19 @@
                 <errorMessage>&lt;p&gt;You can register 1 to 5 tickets per submission.&lt;/p&gt;</errorMessage>
                 <formulaExpression>{!Number_of_Tickets} &gt;= 1  &amp;&amp; {!Number_of_Tickets} &lt;= 5</formulaExpression>
             </validationRule>
+        </fields>
+        <fields>
+            <name>tickets_remaining</name>
+            <fieldText>&lt;p&gt;&lt;em&gt;Tickets remaining for the event: {!tickets_remaining_formula}&lt;/em&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+            <styleProperties>
+                <verticalAlignment>
+                    <stringValue>top</stringValue>
+                </verticalAlignment>
+                <width>
+                    <stringValue>12</stringValue>
+                </width>
+            </styleProperties>
         </fields>
         <showFooter>true</showFooter>
         <showHeader>true</showHeader>
