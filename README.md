@@ -17,7 +17,6 @@ The goal: **showcase end-to-end source-driven DevOps**, CI/CD automation, and re
 - **Gearset** – for CI/CD, deployment pipelines, monitoring, and backups  
 - **GitHub** – for source control and collaboration  
 - **Flows & Permission Sets** – for declarative logic and access management  
-- **Apex Tests (optional)** – for validation on promotion  
 
 ---
 
